@@ -25,4 +25,19 @@ class BuilderTest {
 
         assertEquals(expected, actual)
     }
+
+    @Test
+    fun manual_build_test() {
+
+        val house = House.ManualBuilderImpl()
+            .setFloor(Floor(Material.PLASTIC))
+            .setRoof(Roof(Material.PLASTIC))
+            .setWalls(Wall(Material.PLASTIC))
+            .build()
+
+        val expected = House(Roof(Material.PLASTIC), Floor(Material.PLASTIC), Wall(Material.PLASTIC))
+
+        assertEquals(expected, house)
+
+    }
 }

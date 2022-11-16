@@ -29,3 +29,4 @@ class HouseBuilder : Builder {
     fun getResult(): House = House(roof, floor, wall)
 
 }
+
